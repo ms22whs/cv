@@ -760,7 +760,7 @@ html {
 
 .site-footer__meta {
   font-size: var(--text-xs);
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
 }
 
 /* ==========================================================================
