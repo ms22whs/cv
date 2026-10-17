@@ -2,7 +2,10 @@
   "meta": {
     "lastUpdated": "2026-10-17",
     "defaultLanguage": "ro",
-    "availableLanguages": ["ro", "en"],
+    "availableLanguages": [
+      "ro",
+      "en"
+    ],
     "notes": "Sursă unică de adevăr pentru CV. Datele sunt în format european (LL/AAAA). Telefonul nu se publică. Intrările cu \"category\": \"volunteer\" apar la secțiunea Voluntariat. Cheile din technicalSkills sunt etichete afișate direct."
   },
   "ro": {
@@ -271,14 +274,42 @@
       }
     ],
     "technicalSkills": {
-      "Programare": ["PHP", "JavaScript", "TypeScript", "Python", "Node.js"],
-      "Framework-uri și mobile": ["Angular", "Ionic", "Aplicații mobile (iOS, Android)"],
-      "Baze de date și cloud": ["SQL", "NoSQL", "Firebase"],
-      "Plăți și integrări": ["Stripe (plăți online)"],
-      "Infrastructură și securitate IT": ["Microsoft Server 2019 (management avansat)", "Servere VPS", "Sisteme de securitate IT"],
-      "Office și design": ["Microsoft Office (nivel avansat)", "Photoshop (nivel avansat)"],
-      "Marketing digital": ["Social media", "Meta Ads"],
-      "Certificări digitale": ["ECDL Standard (2020)"]
+      "Programare": [
+        "PHP",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Node.js"
+      ],
+      "Framework-uri și mobile": [
+        "Angular",
+        "Ionic",
+        "Aplicații mobile (iOS, Android)"
+      ],
+      "Baze de date și cloud": [
+        "SQL",
+        "NoSQL",
+        "Firebase"
+      ],
+      "Plăți și integrări": [
+        "Stripe (plăți online)"
+      ],
+      "Infrastructură și securitate IT": [
+        "Microsoft Server 2019 (management avansat)",
+        "Servere VPS",
+        "Sisteme de securitate IT"
+      ],
+      "Office și design": [
+        "Microsoft Office (nivel avansat)",
+        "Photoshop (nivel avansat)"
+      ],
+      "Marketing digital": [
+        "Social media",
+        "Meta Ads"
+      ],
+      "Certificări digitale": [
+        "ECDL Standard (2020)"
+      ]
     },
     "organizationalSkills": {
       "items": [
@@ -574,14 +605,42 @@
       }
     ],
     "technicalSkills": {
-      "Programming": ["PHP", "JavaScript", "TypeScript", "Python", "Node.js"],
-      "Frameworks & mobile": ["Angular", "Ionic", "Mobile apps (iOS, Android)"],
-      "Databases & cloud": ["SQL", "NoSQL", "Firebase"],
-      "Payments & integrations": ["Stripe (online payments)"],
-      "Infrastructure & IT security": ["Microsoft Server 2019 (advanced management)", "VPS servers", "IT security systems"],
-      "Office & design": ["Microsoft Office (advanced level)", "Photoshop (advanced level)"],
-      "Digital marketing": ["Social media", "Meta Ads"],
-      "Digital certifications": ["ECDL Standard (2020)"]
+      "Programming": [
+        "PHP",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Node.js"
+      ],
+      "Frameworks & mobile": [
+        "Angular",
+        "Ionic",
+        "Mobile apps (iOS, Android)"
+      ],
+      "Databases & cloud": [
+        "SQL",
+        "NoSQL",
+        "Firebase"
+      ],
+      "Payments & integrations": [
+        "Stripe (online payments)"
+      ],
+      "Infrastructure & IT security": [
+        "Microsoft Server 2019 (advanced management)",
+        "VPS servers",
+        "IT security systems"
+      ],
+      "Office & design": [
+        "Microsoft Office (advanced level)",
+        "Photoshop (advanced level)"
+      ],
+      "Digital marketing": [
+        "Social media",
+        "Meta Ads"
+      ],
+      "Digital certifications": [
+        "ECDL Standard (2020)"
+      ]
     },
     "organizationalSkills": {
       "items": [
@@ -609,6 +668,55 @@
     ],
     "cta": {
       "downloadCv": "Download CV (PDF)"
+    }
+  },
+  "skillLevels": {
+    "note": "Orientative 1-5 self-assessment shown as bars on the web page only; edit freely.",
+    "items": [
+      [
+        "PHP",
+        5
+      ],
+      [
+        "JavaScript",
+        5
+      ],
+      [
+        "TypeScript",
+        4
+      ],
+      [
+        "Node.js",
+        4
+      ],
+      [
+        "Angular",
+        4
+      ],
+      [
+        "Ionic",
+        4
+      ],
+      [
+        "Firebase",
+        4
+      ],
+      [
+        "SQL / NoSQL",
+        4
+      ],
+      [
+        "Stripe",
+        4
+      ],
+      [
+        "Python",
+        3
+      ]
+    ],
+    "title": {
+      "ro": "Nivel orientativ",
+      "en": "Indicative level"
     }
   }
 }

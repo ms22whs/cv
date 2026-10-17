@@ -16,20 +16,20 @@
   --color-text-muted: oklch(45% 0.02 260);
   --color-text-faint: oklch(58% 0.015 260);
 
-  --color-accent: oklch(47% 0.14 258);
-  --color-accent-strong: oklch(38% 0.15 258);
-  --color-accent-soft: oklch(93% 0.03 258);
-  --color-accent-contrast: oklch(99% 0.005 258);
+  --color-accent: oklch(47% 0.095 197);
+  --color-accent-strong: oklch(38% 0.085 197);
+  --color-accent-soft: oklch(94% 0.03 197);
+  --color-accent-contrast: oklch(99% 0.005 197);
 
-  --color-tag-bg: oklch(94% 0.025 258);
-  --color-tag-text: oklch(35% 0.1 258);
+  --color-tag-bg: oklch(94% 0.025 197);
+  --color-tag-text: oklch(34% 0.07 197);
 
   --shadow-soft: 0 1px 2px oklch(20% 0.02 260 / 0.04), 0 8px 24px oklch(20% 0.02 260 / 0.06);
   --shadow-soft-hover: 0 2px 4px oklch(20% 0.02 260 / 0.06), 0 16px 36px oklch(20% 0.02 260 / 0.11);
 
   /* --- Type tokens --- */
   --font-body: "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
-  --font-display: "Manrope", "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Fraunces", "Source Serif 4", Georgia, "Times New Roman", serif;
 
   --text-xs: clamp(0.75rem, 0.72rem + 0.1vw, 0.8125rem);
   --text-sm: clamp(0.85rem, 0.82rem + 0.1vw, 0.9rem);
@@ -75,13 +75,13 @@
     --color-text-muted: oklch(75% 0.012 260);
     --color-text-faint: oklch(62% 0.014 260);
 
-    --color-accent: oklch(72% 0.11 245);
-    --color-accent-strong: oklch(80% 0.1 245);
-    --color-accent-soft: oklch(28% 0.045 250);
+    --color-accent: oklch(76% 0.1 192);
+    --color-accent-strong: oklch(84% 0.09 192);
+    --color-accent-soft: oklch(28% 0.04 197);
     --color-accent-contrast: oklch(14% 0.01 260);
 
-    --color-tag-bg: oklch(27% 0.04 250);
-    --color-tag-text: oklch(84% 0.06 250);
+    --color-tag-bg: oklch(27% 0.035 197);
+    --color-tag-text: oklch(85% 0.06 192);
 
     --shadow-soft: 0 1px 2px oklch(0% 0 0 / 0.3), 0 8px 24px oklch(0% 0 0 / 0.35);
     --shadow-soft-hover: 0 2px 4px oklch(0% 0 0 / 0.35), 0 16px 36px oklch(0% 0 0 / 0.45);
@@ -103,13 +103,13 @@
   --color-text-muted: oklch(75% 0.012 260);
   --color-text-faint: oklch(62% 0.014 260);
 
-  --color-accent: oklch(72% 0.11 245);
-  --color-accent-strong: oklch(80% 0.1 245);
-  --color-accent-soft: oklch(28% 0.045 250);
+  --color-accent: oklch(76% 0.1 192);
+  --color-accent-strong: oklch(84% 0.09 192);
+  --color-accent-soft: oklch(28% 0.04 197);
   --color-accent-contrast: oklch(14% 0.01 260);
 
-  --color-tag-bg: oklch(27% 0.04 250);
-  --color-tag-text: oklch(84% 0.06 250);
+  --color-tag-bg: oklch(27% 0.035 197);
+  --color-tag-text: oklch(85% 0.06 192);
 
   --shadow-soft: 0 1px 2px oklch(0% 0 0 / 0.3), 0 8px 24px oklch(0% 0 0 / 0.35);
   --shadow-soft-hover: 0 2px 4px oklch(0% 0 0 / 0.35), 0 16px 36px oklch(0% 0 0 / 0.45);
@@ -1201,9 +1201,9 @@ html {
     border-left: 2px solid var(--color-accent);
   }
   .stats__value {
-    font-family: var(--font-heading, var(--font-body));
+    font-family: var(--font-display);
     font-size: clamp(2rem, 1.5rem + 1.8vw, 2.8rem);
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1;
     letter-spacing: -0.03em;
     color: var(--color-text);
@@ -1232,6 +1232,83 @@ html {
 }
 @media (prefers-reduced-motion: reduce) {
   .stats.reveal-stats .stats__item { opacity: 1; transform: none; transition: none; }
+}
+
+/* ==========================================================================
+   Screen polish: hero atmosphere, nav state, timeline draw, skill levels
+   ========================================================================== */
+.skill-levels { display: none; }
+@media screen {
+  h1, h2, h3, .site-header__name, .bento-card__role { font-weight: 600; letter-spacing: -0.01em; }
+  .hero__name { font-weight: 600; letter-spacing: -0.02em; }
+
+  /* Hero: taller, soft teal glow + faint dot grid */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(3.5rem, 2.5rem + 5vw, 6.5rem) clamp(3rem, 2rem + 3.5vw, 5rem);
+    background:
+      radial-gradient(60% 90% at 8% 0%, var(--color-accent-soft) 0%, transparent 70%),
+      radial-gradient(45% 80% at 100% 100%, var(--color-accent-soft) 0%, transparent 75%),
+      var(--color-surface);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, var(--color-border-strong) 1px, transparent 1.4px);
+    background-size: 22px 22px;
+    opacity: 0.55;
+    -webkit-mask-image: linear-gradient(100deg, transparent 35%, #000 100%);
+    mask-image: linear-gradient(100deg, transparent 35%, #000 100%);
+    pointer-events: none;
+  }
+  .hero__inner { position: relative; }
+
+  /* Active section in the sticky nav */
+  .site-nav a.is-active { color: var(--color-accent); }
+  .site-nav a.is-active::after { width: 100%; }
+
+  /* Timeline line draws itself while scrolling */
+  #experienceGrid, #volunteerGrid { position: relative; }
+  #experienceGrid::after, #volunteerGrid::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--color-accent);
+    transform-origin: top;
+    transform: scaleY(var(--tl-progress, 1));
+    pointer-events: none;
+  }
+  #experienceGrid .bento-card::before, #volunteerGrid .bento-card::before { z-index: 1; }
+
+  /* Skill levels */
+  .org-skills-title { font-family: var(--font-body); }
+  .skill-levels { display: block; margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px solid var(--color-border); }
+  .skill-levels__title {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--color-text-faint); margin: 0 0 0.7rem; font-family: var(--font-body);
+  }
+  .skill-levels__row { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.22rem 0; font-size: var(--text-sm); }
+  .skill-levels__name { color: var(--color-text); font-weight: 500; }
+  .skill-levels__bar { display: inline-flex; gap: 3px; }
+  .skill-levels__bar i {
+    width: 18px; height: 6px; border-radius: 3px; background: var(--color-border);
+    transition: background-color 0.5s ease; display: block;
+  }
+  .skill-levels.is-visible .skill-levels__bar i.is-on { background: var(--color-accent); }
+  .skill-levels__bar i:nth-child(2) { transition-delay: 0.08s; }
+  .skill-levels__bar i:nth-child(3) { transition-delay: 0.16s; }
+  .skill-levels__bar i:nth-child(4) { transition-delay: 0.24s; }
+  .skill-levels__bar i:nth-child(5) { transition-delay: 0.32s; }
+  .skill-levels.no-motion .skill-levels__bar i.is-on { background: var(--color-accent); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #experienceGrid::after, #volunteerGrid::after { transform: none; }
+  .skill-levels__bar i { transition: none; }
 }
 
 /* ==========================================================================

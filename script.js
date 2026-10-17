@@ -914,6 +914,64 @@
       orgList.appendChild(li);
     });
     document.getElementById("drivingLicenseText").textContent = data.organizationalSkills.drivingLicense;
+    renderSkillLevels(lang);
+  }
+
+
+  var SKILL_LEVELS = {
+    title: { ro: "Nivel orientativ", en: "Indicative level" },
+    items: [["PHP", 5], ["JavaScript", 5], ["TypeScript", 4], ["Node.js", 4], ["Angular", 4], ["Ionic", 4], ["Firebase", 4], ["SQL / NoSQL", 4], ["Stripe", 4], ["Python", 3]]
+  };
+
+  function renderSkillLevels(lang) {
+    var box = document.getElementById("skillLevels");
+    if (!box) return;
+    var rows = SKILL_LEVELS.items.map(function (it) {
+      var bar = "";
+      for (var i = 1; i <= 5; i++) bar += '<i class="' + (i <= it[1] ? "is-on" : "") + '"></i>';
+      return '<div class="skill-levels__row" role="img" aria-label="' + escapeHtml(it[0]) + ": " + it[1] + '/5">' +
+        '<span class="skill-levels__name">' + escapeHtml(it[0]) + '</span><span class="skill-levels__bar" aria-hidden="true">' + bar + "</span></div>";
+    }).join("");
+    box.innerHTML = '<h3 class="skill-levels__title">' + SKILL_LEVELS.title[lang] + "</h3>" + rows;
+    if (prefersReducedMotion) box.classList.add("no-motion");
+  }
+
+  /* Nav scrollspy + timeline draw */
+  function initScrollEffects() {
+    var links = Array.prototype.slice.call(document.querySelectorAll(".site-nav a"));
+    var secs = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+    var nav = document.querySelector(".site-nav");
+    var grids = Array.prototype.slice.call(document.querySelectorAll("#experienceGrid, #volunteerGrid"));
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var line = window.innerHeight * 0.35, active = -1;
+      secs.forEach(function (sec, i) {
+        /* Side-column sections (skills, languages) sit beside the main flow, so only main sections and contact drive the highlight. */
+        if (sec && !sec.hidden && !sec.closest(".cv-side") && sec.getBoundingClientRect().top <= line) active = i;
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) active = links.length - 1;
+      links.forEach(function (a, i) {
+        var on = i === active;
+        a.classList.toggle("is-active", on);
+        if (on) { a.setAttribute("aria-current", "location"); } else { a.removeAttribute("aria-current"); }
+      });
+      if (active >= 0 && nav && nav.scrollWidth > nav.clientWidth) {
+        var a = links[active];
+        nav.scrollLeft = a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2;
+      }
+      grids.forEach(function (g) {
+        if (prefersReducedMotion) return;
+        var r = g.getBoundingClientRect();
+        var p = (window.innerHeight * 0.65 - r.top) / Math.max(r.height, 1);
+        g.style.setProperty("--tl-progress", String(Math.max(0, Math.min(1, p))));
+      });
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
   }
 
   /* ------------------------------------------------------------------ */
@@ -1119,6 +1177,7 @@
     setLang(getInitialLang());
     initScrollProgress();
     initStats();
+    initScrollEffects();
   }
 
   document.addEventListener("DOMContentLoaded", init);
