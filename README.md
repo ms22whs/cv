@@ -2,19 +2,29 @@
 
 🇬🇧 [Read this in English](./README.en.md)
 
+**Coordonator proiecte europene · Dezvoltator software** · Mureș, România
+
+📧 [ovysimon@gmail.com](mailto:ovysimon@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/ovisimon/) · 🌐 [Pagina CV live](https://ms22whs.github.io/cv/)
+
 ## Despre mine
 
-Antreprenor și dezvoltator software cu firmă proprie din 2013, cu experiență de peste un deceniu în proiecte cu finanțare europeană POCU/FSE. Combină expertiza tehnică de dezvoltare software cu managementul de proiect — de la coordonarea partenerilor și a echipelor multidisciplinare până la monitorizarea indicatorilor și raportare.
+Antreprenor și dezvoltator software (firmă proprie din 2013) și fondator al Căsuța Jocului, centru educațional nonformal pentru copii. Experiență în proiecte cu finanțare europeană (POR, POCU, PIDS) din 2011, combinând dezvoltarea software cu managementul de proiect: coordonare parteneri și echipe multidisciplinare, elaborare de metodologii, monitorizare indicatori și raportare.
 
 ## Competențe cheie
 
-**Tehnice** — PHP, JavaScript, TypeScript, Python · SQL, NoSQL · iOS, Android · Microsoft Server 2019 (management avansat), administrare servere VPS · Microsoft Office și Photoshop (nivel avansat)
+**Tehnice** — PHP, JavaScript, TypeScript, Python, Node.js · Angular, Ionic, aplicații mobile (iOS, Android) · SQL, NoSQL, Firebase · Stripe (plăți online) · Microsoft Server 2019 (management avansat), servere VPS, sisteme de securitate IT · Microsoft Office și Photoshop (nivel avansat) · Social media, Meta Ads
 
-**Organizaționale** — Management de proiecte cu finanțare europeană (POCU/FSE), coordonare parteneri și echipe multidisciplinare, elaborare metodologii de proiect, monitorizare indicatori și rapoarte, identificare și atragere de surse de finanțare, implementare și administrare sisteme de securitate IT
+**Organizaționale** — Management de proiecte cu finanțare europeană (POR, POCU, PIDS), coordonare parteneri și echipe multidisciplinare, elaborare de metodologii și documente de proiect, monitorizare indicatori și rapoarte, atragerea de surse de finanțare externă
 
-**Limbi** — Română (limbă maternă), Engleză (C1/C2)
+**Limbi** — Română (limbă maternă), Engleză (C1–C2)
 
 ## Experiență reprezentativă
+
+**Fondator și administrator** — Căsuța Jocului S.R.L. (2025 – prezent)
+Înființarea și administrarea unui centru educațional nonformal pentru copii de 1,5–4 ani: resurse umane, conformitate legală, marketing și platformă digitală proprie.
+
+**Fondator și dezvoltator software** — firmă proprie, B2B (2013 – prezent)
+Soluții software la comandă; flux complet de plată online cu Stripe (Node.js/TypeScript, Angular) construit de la zero pentru un operator de turism.
 
 **Coordonator Partener 2 / Director Tehnic și Coordonator Partener** — Asociația Getica
 *T.I.M.E. NORD-VEST — Tineri Integrați prin Măsuri Europene în Regiunea Nord-Vest* (11/2020 – 09/2022)
@@ -26,16 +36,16 @@ Elaborarea și actualizarea metodologiilor de proiect, coordonarea experților i
 
 **Expert Informare 2 - Partener** — Asociația Getica
 *SES 4 YOU — Sprijin pentru înființarea de întreprinderi sociale în mediul rural* (07/2024)
-Informare și selecție grup țintă, încheierea de protocoale de colaborare cu autorități locale și ONG-uri.
+Informarea și selecția a minimum 66 de persoane dintr-un grup țintă de 132; minimum 10 protocoale de colaborare cu autorități locale și ONG-uri.
 
 **Asistent Manager** — Spitalul Clinic Județean de Urgență Târgu Mureș
 *Fii responsabilă de sănătatea ta — programe regionale de prevenție a cancerului de col uterin* (03/2023 – 07/2023)
 Sprijinirea grupurilor vulnerabile din mediul rural și monitorizarea rapoartelor lunare transmise de personalul medical.
 
-Pentru experiența completă (10 proiecte, 2008–2025) și studii, vezi pagina CV live sau descarcă PDF-ul de mai jos.
+Pentru experiența completă (proiecte 2011–2024, voluntariat 2008–2010), studii și certificări, vezi pagina CV live sau descarcă PDF-ul.
 
 ## CV complet
 
-- Pagina live: [DE COMPLETAT - link GitHub Pages, ex. https://<username>.github.io/cv/]
+- 🌐 [Pagina live](https://ms22whs.github.io/cv/)
 - [Descarcă CV RO (PDF)](./cv-ovidiu-simon-ro.pdf)
 - [Download CV EN (PDF)](./cv-ovidiu-simon-en.pdf)

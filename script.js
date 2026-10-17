@@ -12,139 +12,683 @@
   /* ------------------------------------------------------------------ */
 
   var CV_DATA = {
-    ro: {
-      personalInfo: { fullName: "Ovidiu Simon", email: "[DE COMPLETAT]", linkedin: "[DE COMPLETAT]", photo: null },
-      about: {
-        text: "Antreprenor și dezvoltator software cu firmă proprie din 2013, cu experiență de peste un deceniu în proiecte cu finanțare europeană POCU/FSE. Combină expertiza tehnică de dezvoltare software cu managementul de proiect, de la coordonarea partenerilor și a echipelor multidisciplinare până la monitorizarea indicatorilor și raportare."
+    "ro": {
+      "personalInfo": {
+        "fullName": "Ovidiu Simon",
+        "headline": "Coordonator proiecte europene · Dezvoltator software",
+        "location": "Mureș, România",
+        "email": "ovysimon@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/ovisimon/",
+        "photo": null
       },
-      experience: [
-        { role: "Expert Informare 2 - Partener", organization: "Asociația Getica", location: "Târgu Mureș", period: "01/07/2024 - 22/07/2024",
-          project: { name: "SES 4 YOU - Sprijin pentru înființarea de întreprinderi sociale în mediul rural, regiunile Nord-Vest și Centru", contractCode: "PIDS/83/PIDS_P3/OP4/ESO4.1/PIDS_A12/309922" },
-          bullets: ["Informarea și selecția a minimum 66 de persoane dintr-un grup țintă de 132, prin campanii organizate simultan în mai multe locații", "Încheierea a minimum 10 protocoale de colaborare cu autorități locale și ONG-uri, cu distribuirea materialelor de instruire", "Aplicarea și analiza chestionarelor, actualizarea dosarelor grupului țintă și menținerea comunicării constante cu participanții"] },
-        { role: "Asistent Manager", organization: "Spitalul Clinic Județean de Urgență Târgu Mureș", location: "Târgu Mureș", period: "09/03/2023 - 11/07/2023",
-          project: { name: "Fii responsabilă de sănătatea ta - programe regionale de prevenție, depistare precoce, diagnostic și tratament precoce al cancerului de col uterin - Etapa II regiunea Centru (cofinanțat POCU 2014-2020)", contractCode: "POCU/826/4/9/138603" },
-          bullets: ["Asistență directă a managerului de proiect în informarea și sprijinirea grupurilor vulnerabile din mediul rural, în special femei fără acces la servicii medicale de bază", "Monitorizarea și verificarea rapoartelor lunare transmise de medici și personal auxiliar"] },
-        { role: "Coordonator Partener", organization: "Asociația Getica", location: "Târgu Mureș", period: "01/01/2022 - 09/2022",
-          project: { name: "innoCENT NORD-VEST", contractCode: "POCU/829/6/13/141999" },
-          bullets: ["Elaborarea și actualizarea metodologiilor și instrumentelor de lucru ale proiectului", "Stabilirea sarcinilor experților implicați în activități și coordonarea acestora", "Realizarea de vizite la fața locului pentru verificarea implementării"] },
-        { role: "Expert Informare Partener 2", organization: "Asociația Getica", location: "Târgu Mureș", period: "24/03/2021 - 09/2021",
-          project: { name: "T.I.M.E. CENTRU - Tineri Integrați prin Măsuri Europene în Regiunea Centru", contractCode: "POCU/738/4/20/135850" },
-          bullets: ["Prezentarea beneficiilor unui sistem complex de servicii sociale, medicale și socio-medicale, precum și a oportunităților proiectului", "Identificarea, selecția și înregistrarea persoanelor din grupul țintă conform criteriilor de selecție", "Întocmirea dosarelor de informare și selecție, cu raportare corectă și la termen către șeful ierarhic", "Responsabilitate pentru îndeplinirea indicatorilor subactivității"] },
-        { role: "Coordonator Partener 2", alternateTitle: "Director Tehnic și Coordonator Partener", organization: "Asociația Getica", location: "Com. Bălăușeri, Sat Senereuș", period: "01/11/2020 - 09/2022",
-          project: { name: "T.I.M.E. NORD-VEST - Tineri Integrați prin Măsuri Europene în Regiunea Nord-Vest", contractCode: "POCU/738/4/20/136130" },
-          bullets: ["Elaborarea, modificarea și avizarea metodologiei de formare profesională și a documentelor relevante pentru subactivitate", "Participarea la elaborarea curriculei de formare profesională (introducere în domeniu, noțiuni generale și specifice, mijloace de instruire: expunere, observație, interogație, demonstrație) pentru un plan de afaceri", "Verificarea documentelor necesare susținerii sesiunilor de formare și examenelor, cu respectarea graficului de implementare", "Asigurarea egalității de șanse și nediscriminării pe toată durata cursurilor", "Coordonarea de echipe multidisciplinare într-un proiect de integrare socială și profesională a tinerilor vulnerabili"] },
-        { role: "Responsabil Grup Țintă", organization: "S.C. Ioanida Turism S.R.L.", location: "Deda", period: "28/07/2020 - 15/04/2021",
-          project: { name: "Entrepreneurship for doers! - Dezvoltare sustenabilă în regiunea Nord-Est", contractCode: "POCU/82/3/7/104437" },
-          bullets: ["Selecția și recrutarea grupului țintă", "Evaluarea motivației participanților pentru dezvoltarea unei afaceri pe cont propriu", "Menținerea comunicării cu grupul țintă pe toată durata proiectului"] },
-        { role: "Formator Specializare", organization: "S.C. Unicsports S.R.L.", location: "Deda", period: "13/11/2019 - 06/02/2020",
-          project: { name: "De la marginalizare la integrare!", contractCode: "POCU/18/4/1/115353" }, bullets: [] },
-        { role: "Coordonator Partener 2", organization: "Fundația Culturală \"Hyperion\"", location: "Târgu Mureș", period: "28/02/2019 - 30/03/2020",
-          project: { name: "Orice ai învăța, înveți pentru tine - Stop abandonului școlar!", contractCode: "POCU/74/6/18/108105" }, bullets: [] },
-        { role: "Colaborator", organization: "Asociația pentru Turism \"Astur Mureș\"", location: "Reghin", period: "09/03/2011 - 09/03/2016",
-          project: { name: "Muzeul de Etnografie Reghin - cultură și tradiție", contractCode: "AM POR nr. 25304" },
-          bullets: ["Implicare în elaborarea de workshop-uri și prezentări tematice", "Participare la sesiuni de brainstorming cu participanții proiectului"] },
-        { role: "Voluntar - Activități Sociale", organization: "Fundația Integro", location: "Târgu Mureș", period: "11/08/2008 - 17/08/2010",
-          project: null,
-          bullets: ["Implicare în centre și ateliere educative din Târgu Mureș, cu accent pe învățare prin joc și inițiere în scris-citit pentru copii din familii defavorizate", "Organizarea și susținerea de ateliere cu caracter formativ-religios, axate pe respect în familie, conviețuire socială, bunătate și solidaritate", "Organizarea taberelor sociale gratuite de la Sălard (Satul de Vacanță Integro)", "Desfășurarea de întâlniri educaționale prin jocuri cu copii din Lunca Bradului și din comunitatea vulnerabilă Târgu Mureș-Valea Rece (copii de etnie romă)", "Participare la sesiuni de dezvoltare personală și formare a voluntarilor"] }
-      ],
-      education: [
-        { type: "diplomă", title: "Diplomă de Master - Gestiune Financiară", field: "Gestiunea Financiară a Afacerilor", institution: "Universitatea \"Dimitrie Cantemir\" din Târgu Mureș", period: "30/09/2014 - 11/06/2016",
-          bullets: ["Fundamente teoretice financiar-fiscale pentru dinamică și inovație în mediul de afaceri", "Înțelegerea problemelor macroeconomice legate de monedă și fluxuri monetare", "Utilizarea conceptelor de sisteme informatice în întreprinderi"] },
-        { type: "diplomă", title: "Diplomă de Licență - ECTS (Economia Comerțului, Turismului și Serviciilor)", field: null, institution: "Universitatea \"Dimitrie Cantemir\" din Târgu Mureș", period: "30/09/2011 - 11/07/2014",
-          bullets: ["Economie politică, contabilitate managerială și financiară, statistică și matematică aplicată", "Management, marketing și tehnici promoționale, finanțe publice", "Managementul resurselor umane și asigurări/protecție socială"] },
-        { type: "certificat", title: "Certificat de absolvire - Competențe Antreprenoriale", field: null, institution: null, period: "19/04/2013 - 14/06/2013", bullets: [] },
-        { type: "certificat", title: "ECDL certificare STANDARD", field: null, institution: "ECDL Romania", period: "12/02/2020", bullets: ["Module: bază de date, calcul tabelar, editare de text, instrumente online, IT security, prezentări, utilizarea computerului"] },
-        { type: "certificat", title: "Inspector / Referent Resurse Umane", field: null, institution: "Loop Operations SRL", location: "București", period: "06/09/2019", bullets: [] },
-        { type: "certificat", title: "Formator de Formatori", field: null, institution: "SC Unic Sports SRL", location: "Deda", period: "01/07/2019", bullets: [] },
-        { type: "certificat", title: "Manager Proiect", field: null, institution: "Ioanida Turism SRL", location: "Comuna Deda", period: "17/11/2020 - 09/12/2020", bullets: [] },
-        { type: "certificat", title: "Antreprenor în Economia Socială", field: null, institution: "Fundația PROGPERS", location: "Alba Iulia", period: "2025", bullets: [] }
-      ],
-      technicalSkills: {
-        "Programare": ["PHP", "JavaScript", "TypeScript", "Python"],
-        "Baze de date": ["SQL", "NoSQL"],
-        "Mobile": ["iOS", "Android"],
-        "Infrastructură": ["Microsoft Server 2019 (management avansat)", "Management servere VPS"],
-        "Office și design": ["Microsoft Office (nivel avansat)", "Photoshop (nivel avansat)"],
-        "Altele": ["ECDL Standard", "Social Media", "Procesatoare de plăți"]
+      "about": {
+        "draft": true,
+        "text": "Antreprenor și dezvoltator software (firmă proprie din 2013) și fondator al Căsuța Jocului, centru educațional nonformal pentru copii. Experiență în proiecte cu finanțare europeană (POR, POCU, PIDS) din 2011, combinând dezvoltarea software cu managementul de proiect: coordonare parteneri și echipe multidisciplinare, elaborare de metodologii, monitorizare indicatori și raportare."
       },
-      organizationalSkills: {
-        summary: "Management de proiecte pe fonduri europene (POCU/FSE), coordonare parteneri și echipe multidisciplinare, elaborare metodologii și documente de proiect, monitorizare indicatori și rapoarte, identificarea și atragerea de surse de finanțare externă (națională/europeană), implementare și administrare sisteme de securitate IT pentru rețele și infrastructuri informatice, colaborare cu Organisme Intermediare Regionale.",
-        drivingLicense: "Permis de conducere: B, BE"
-      },
-      languages: [
-        { name: "Română", level: "Limba maternă" },
-        { name: "Engleză", listening: "C2", reading: "C2", spokenProduction: "C1", spokenInteraction: "C2", writing: "C1" }
+      "experience": [
+        {
+          "role": "Fondator și administrator",
+          "organization": "Căsuța Jocului S.R.L.",
+          "location": "Mureș",
+          "period": "2025 - prezent",
+          "project": null,
+          "bullets": [
+            "Înființarea și administrarea unui centru educațional nonformal pentru copii de 1,5–4 ani",
+            "Coordonarea întregii activități operaționale: resurse umane, conformitate legală și marketing",
+            "Dezvoltarea platformei digitale proprii: site web, platformă de administrare și aplicație mobilă (Kidoo)"
+          ]
+        },
+        {
+          "role": "Fondator și dezvoltator software",
+          "organization": "Firmă proprie de dezvoltare software (B2B)",
+          "location": "România",
+          "period": "2013 - prezent",
+          "project": null,
+          "bullets": [
+            "Dezvoltarea de soluții software la comandă pentru clienți B2B (PHP, JavaScript, TypeScript, Python)",
+            "Realizarea de la zero a unui flux complet de plată online cu Stripe (Node.js/TypeScript, Angular) pentru un operator de turism, pe parcursul a 2 ani",
+            "Administrarea serverelor (Microsoft Server 2019, VPS) și implementarea sistemelor de securitate IT"
+          ]
+        },
+        {
+          "role": "Expert Informare 2 - Partener",
+          "organization": "Asociația Getica",
+          "location": "Târgu Mureș",
+          "period": "07/2024",
+          "project": {
+            "name": "SES 4 YOU - Sprijin pentru înființarea de întreprinderi sociale în mediul rural, regiunile Nord-Vest și Centru",
+            "contractCode": "PIDS/83/PIDS_P3/OP4/ESO4.1/PIDS_A12/309922"
+          },
+          "bullets": [
+            "Informarea și selecția a minimum 66 de persoane dintr-un grup țintă de 132, prin campanii organizate simultan în mai multe locații",
+            "Încheierea a minimum 10 protocoale de colaborare cu autorități locale și ONG-uri, cu distribuirea materialelor de instruire",
+            "Aplicarea și analiza chestionarelor, actualizarea dosarelor grupului țintă și menținerea comunicării constante cu participanții"
+          ]
+        },
+        {
+          "role": "Asistent Manager",
+          "organization": "Spitalul Clinic Județean de Urgență Târgu Mureș",
+          "location": "Târgu Mureș",
+          "period": "03/2023 - 07/2023",
+          "project": {
+            "name": "Fii responsabilă de sănătatea ta - programe regionale de prevenție, depistare precoce, diagnostic și tratament precoce al cancerului de col uterin - Etapa II regiunea Centru (cofinanțat POCU 2014-2020)",
+            "contractCode": "POCU/826/4/9/138603"
+          },
+          "bullets": [
+            "Asistență directă a managerului de proiect în informarea și sprijinirea grupurilor vulnerabile din mediul rural, în special femei fără acces la servicii medicale de bază",
+            "Monitorizarea și verificarea rapoartelor lunare transmise de medici și personal auxiliar"
+          ]
+        },
+        {
+          "role": "Coordonator Partener",
+          "organization": "Asociația Getica",
+          "location": "Târgu Mureș",
+          "period": "01/2022 - 09/2022",
+          "project": {
+            "name": "innoCENT NORD-VEST",
+            "contractCode": "POCU/829/6/13/141999"
+          },
+          "bullets": [
+            "Elaborarea și actualizarea metodologiilor și instrumentelor de lucru ale proiectului",
+            "Stabilirea sarcinilor experților implicați în activități și coordonarea acestora",
+            "Realizarea de vizite la fața locului pentru verificarea implementării"
+          ]
+        },
+        {
+          "role": "Expert Informare Partener 2",
+          "organization": "Asociația Getica",
+          "location": "Târgu Mureș",
+          "period": "03/2021 - 09/2021",
+          "project": {
+            "name": "T.I.M.E. CENTRU - Tineri Integrați prin Măsuri Europene în Regiunea Centru",
+            "contractCode": "POCU/738/4/20/135850"
+          },
+          "bullets": [
+            "Prezentarea beneficiilor unui sistem complex de servicii sociale, medicale și socio-medicale, precum și a oportunităților proiectului",
+            "Identificarea, selecția și înregistrarea persoanelor din grupul țintă conform criteriilor de selecție",
+            "Întocmirea dosarelor de informare și selecție, cu raportare corectă și la termen către șeful ierarhic",
+            "Responsabilitate pentru îndeplinirea indicatorilor subactivității"
+          ]
+        },
+        {
+          "role": "Coordonator Partener 2",
+          "alternateTitle": "Director Tehnic și Coordonator Partener",
+          "organization": "Asociația Getica",
+          "location": "Com. Bălăușeri, Sat Senereuș",
+          "period": "11/2020 - 09/2022",
+          "project": {
+            "name": "T.I.M.E. NORD-VEST - Tineri Integrați prin Măsuri Europene în Regiunea Nord-Vest",
+            "contractCode": "POCU/738/4/20/136130"
+          },
+          "bullets": [
+            "Elaborarea, modificarea și avizarea metodologiei de formare profesională și a documentelor relevante pentru subactivitate",
+            "Participarea la elaborarea curriculei de formare profesională (introducere în domeniu, noțiuni generale și specifice, mijloace de instruire: expunere, observație, interogație, demonstrație) pentru un plan de afaceri",
+            "Verificarea documentelor necesare susținerii sesiunilor de formare și examenelor, cu respectarea graficului de implementare",
+            "Asigurarea egalității de șanse și nediscriminării pe toată durata cursurilor",
+            "Coordonarea de echipe multidisciplinare într-un proiect de integrare socială și profesională a tinerilor vulnerabili"
+          ]
+        },
+        {
+          "role": "Responsabil Grup Țintă",
+          "organization": "S.C. Ioanida Turism S.R.L.",
+          "location": "Deda",
+          "period": "07/2020 - 04/2021",
+          "project": {
+            "name": "Entrepreneurship for doers! - Dezvoltare sustenabilă în regiunea Nord-Est",
+            "contractCode": "POCU/82/3/7/104437"
+          },
+          "bullets": [
+            "Selecția și recrutarea grupului țintă",
+            "Evaluarea motivației participanților pentru dezvoltarea unei afaceri pe cont propriu",
+            "Menținerea comunicării cu grupul țintă pe toată durata proiectului"
+          ]
+        },
+        {
+          "role": "Formator Specializare",
+          "organization": "S.C. Unicsports S.R.L.",
+          "location": "Deda",
+          "period": "11/2019 - 02/2020",
+          "project": {
+            "name": "De la marginalizare la integrare!",
+            "contractCode": "POCU/18/4/1/115353"
+          },
+          "bullets": []
+        },
+        {
+          "role": "Coordonator Partener 2",
+          "organization": "Fundația Culturală \"Hyperion\"",
+          "location": "Târgu Mureș",
+          "period": "02/2019 - 03/2020",
+          "project": {
+            "name": "Orice ai învăța, înveți pentru tine - Stop abandonului școlar!",
+            "contractCode": "POCU/74/6/18/108105"
+          },
+          "bullets": []
+        },
+        {
+          "role": "Colaborator",
+          "organization": "Asociația pentru Turism \"Astur Mureș\"",
+          "location": "Reghin",
+          "period": "03/2011 - 03/2016",
+          "project": {
+            "name": "Muzeul de Etnografie Reghin - cultură și tradiție",
+            "contractCode": "AM POR nr. 25304"
+          },
+          "bullets": [
+            "Implicare în elaborarea de workshop-uri și prezentări tematice",
+            "Participare la sesiuni de brainstorming cu participanții proiectului"
+          ]
+        },
+        {
+          "category": "volunteer",
+          "role": "Voluntar - Activități Sociale",
+          "organization": "Fundația Integro",
+          "location": "Târgu Mureș",
+          "period": "08/2008 - 08/2010",
+          "project": null,
+          "bullets": [
+            "Implicare în centre și ateliere educative din Târgu Mureș, cu accent pe învățare prin joc și inițiere în scris-citit pentru copii din familii defavorizate",
+            "Organizarea și susținerea de ateliere cu caracter formativ-religios, axate pe respect în familie, conviețuire socială, bunătate și solidaritate",
+            "Organizarea taberelor sociale gratuite de la Sălard (Satul de Vacanță Integro)",
+            "Desfășurarea de întâlniri educaționale prin jocuri cu copii din Lunca Bradului și din comunitatea vulnerabilă Târgu Mureș-Valea Rece (copii de etnie romă)",
+            "Participare la sesiuni de dezvoltare personală și formare a voluntarilor"
+          ]
+        }
       ],
-      cta: { downloadCv: "Descarcă CV (PDF)" },
-      cefrLabels: { listening: "Comprehensiune orală", reading: "Citit", spokenProduction: "Producere mesaje orale", spokenInteraction: "Conversație", writing: "Scris" },
-      pdfFile: "cv-ovidiu-simon-ro.pdf"
+      "education": [
+        {
+          "type": "diplomă",
+          "level": "Nivel EQF 7",
+          "title": "Diplomă de Master - Gestiune Financiară",
+          "field": "Gestiunea Financiară a Afacerilor",
+          "institution": "Universitatea \"Dimitrie Cantemir\" din Târgu Mureș",
+          "period": "09/2014 - 06/2016",
+          "bullets": [
+            "Fundamente teoretice financiar-fiscale pentru dinamică și inovație în mediul de afaceri",
+            "Înțelegerea problemelor macroeconomice legate de monedă și fluxuri monetare",
+            "Utilizarea conceptelor de sisteme informatice în întreprinderi"
+          ]
+        },
+        {
+          "type": "diplomă",
+          "level": "Nivel EQF 6",
+          "title": "Diplomă de Licență - ECTS (Economia Comerțului, Turismului și Serviciilor)",
+          "field": null,
+          "institution": "Universitatea \"Dimitrie Cantemir\" din Târgu Mureș",
+          "period": "09/2011 - 07/2014",
+          "bullets": [
+            "Economie politică, contabilitate managerială și financiară, statistică și matematică aplicată",
+            "Management, marketing și tehnici promoționale, finanțe publice",
+            "Managementul resurselor umane și asigurări/protecție socială"
+          ]
+        },
+        {
+          "type": "certificat",
+          "title": "Antreprenor în Economia Socială",
+          "field": null,
+          "institution": "Fundația PROGPERS",
+          "location": "Alba Iulia",
+          "period": "2025",
+          "bullets": []
+        },
+        {
+          "type": "certificat",
+          "title": "ECDL certificare STANDARD",
+          "field": null,
+          "institution": "ECDL Romania",
+          "period": "02/2020",
+          "bullets": [
+            "Module: bază de date, calcul tabelar, editare de text, instrumente online, IT security, prezentări, utilizarea computerului"
+          ]
+        },
+        {
+          "type": "certificat",
+          "title": "Manager Proiect",
+          "field": null,
+          "institution": "Ioanida Turism SRL",
+          "location": "Comuna Deda",
+          "period": "11/2020 - 12/2020",
+          "bullets": []
+        },
+        {
+          "type": "certificat",
+          "title": "Inspector / Referent Resurse Umane",
+          "field": null,
+          "institution": "Loop Operations SRL",
+          "location": "București",
+          "period": "09/2019",
+          "bullets": []
+        },
+        {
+          "type": "certificat",
+          "title": "Formator de Formatori",
+          "field": null,
+          "institution": "SC Unic Sports SRL",
+          "location": "Deda",
+          "period": "07/2019",
+          "bullets": []
+        },
+        {
+          "type": "certificat",
+          "title": "Certificat de absolvire - Competențe Antreprenoriale",
+          "field": null,
+          "institution": null,
+          "period": "04/2013 - 06/2013",
+          "bullets": []
+        }
+      ],
+      "technicalSkills": {
+        "Programare": [
+          "PHP",
+          "JavaScript",
+          "TypeScript",
+          "Python",
+          "Node.js"
+        ],
+        "Framework-uri și mobile": [
+          "Angular",
+          "Ionic",
+          "Aplicații mobile (iOS, Android)"
+        ],
+        "Baze de date și cloud": [
+          "SQL",
+          "NoSQL",
+          "Firebase"
+        ],
+        "Plăți și integrări": [
+          "Stripe (plăți online)"
+        ],
+        "Infrastructură și securitate IT": [
+          "Microsoft Server 2019 (management avansat)",
+          "Servere VPS",
+          "Sisteme de securitate IT"
+        ],
+        "Office și design": [
+          "Microsoft Office (nivel avansat)",
+          "Photoshop (nivel avansat)"
+        ],
+        "Marketing digital": [
+          "Social media",
+          "Meta Ads"
+        ],
+        "Certificări digitale": [
+          "ECDL Standard (2020)"
+        ]
+      },
+      "organizationalSkills": {
+        "items": [
+          "Management de proiecte cu finanțare europeană (POR, POCU, PIDS)",
+          "Coordonare de parteneri și echipe multidisciplinare",
+          "Elaborare de metodologii și documente de proiect",
+          "Monitorizare indicatori și rapoarte; colaborare cu Organisme Intermediare Regionale",
+          "Identificarea și atragerea de surse de finanțare externă (națională/europeană)"
+        ],
+        "drivingLicense": "Permis de conducere: B, BE"
+      },
+      "languages": [
+        {
+          "name": "Română",
+          "level": "Limba maternă"
+        },
+        {
+          "name": "Engleză",
+          "listening": "C2",
+          "reading": "C2",
+          "spokenProduction": "C1",
+          "spokenInteraction": "C2",
+          "writing": "C1"
+        }
+      ],
+      "cta": {
+        "downloadCv": "Descarcă CV (PDF)"
+      },
+      "cefrLabels": {
+        "listening": "Comprehensiune orală",
+        "reading": "Citit",
+        "spokenProduction": "Producere mesaje orale",
+        "spokenInteraction": "Conversație",
+        "writing": "Scris"
+      },
+      "pdfFile": "cv-ovidiu-simon-ro.pdf"
     },
-    en: {
-      personalInfo: { fullName: "Ovidiu Simon", email: "[DE COMPLETAT]", linkedin: "[DE COMPLETAT]", photo: null },
-      about: {
-        text: "Entrepreneur and software developer running his own company since 2013, with over a decade of experience in POCU/ESF-funded European projects. He combines technical software development expertise with project management - from coordinating partners and multidisciplinary teams to indicator monitoring and reporting."
+    "en": {
+      "personalInfo": {
+        "fullName": "Ovidiu Simon",
+        "headline": "European Projects Coordinator · Software Developer",
+        "location": "Mureș, Romania",
+        "email": "ovysimon@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/ovisimon/",
+        "photo": null
       },
-      experience: [
-        { role: "Information Expert 2 - Partner", organization: "Asociația Getica", location: "Târgu Mureș", period: "07/01/2024 - 07/22/2024",
-          project: { name: "SES 4 YOU - Support for setting up social enterprises in rural areas, North-West and Centre regions", contractCode: "PIDS/83/PIDS_P3/OP4/ESO4.1/PIDS_A12/309922" },
-          bullets: ["Informed and selected at least 66 people from a target group of 132, through campaigns run simultaneously across multiple locations", "Signed at least 10 cooperation protocols with local authorities and NGOs, and distributed training materials", "Applied and analyzed questionnaires, updated target group files, and maintained ongoing communication with participants"] },
-        { role: "Assistant Manager", organization: "Târgu Mureș County Emergency Clinical Hospital", location: "Târgu Mureș", period: "03/09/2023 - 07/11/2023",
-          project: { name: "Be responsible for your health - regional prevention, early detection, diagnosis and early treatment programs for cervical cancer - Phase II, Centre region (co-financed under POCU 2014-2020)", contractCode: "POCU/826/4/9/138603" },
-          bullets: ["Directly assisted the project manager in informing and supporting vulnerable groups in rural areas, particularly women without access to basic healthcare services", "Monitored and verified monthly reports submitted by doctors and auxiliary staff"] },
-        { role: "Partner Coordinator", organization: "Asociația Getica", location: "Târgu Mureș", period: "01/01/2022 - 09/2022",
-          project: { name: "innoCENT NORD-VEST", contractCode: "POCU/829/6/13/141999" },
-          bullets: ["Developed and updated the project's working methodologies and tools", "Assigned and coordinated tasks for experts involved in project activities", "Conducted on-site visits to verify implementation"] },
-        { role: "Information Expert - Partner 2", organization: "Asociația Getica", location: "Târgu Mureș", period: "03/24/2021 - 09/2021",
-          project: { name: "T.I.M.E. CENTRU - Young People Integrated through European Measures in the Centre Region", contractCode: "POCU/738/4/20/135850" },
-          bullets: ["Presented the benefits of a comprehensive social, medical and socio-medical services system, as well as the project's opportunities", "Identified, selected and registered target group members according to the selection criteria", "Prepared information and selection files, reporting accurately and on time to the line manager", "Accountable for meeting the sub-activity's performance indicators"] },
-        { role: "Partner Coordinator 2", alternateTitle: "Technical Director and Partner Coordinator", organization: "Asociația Getica", location: "Bălăușeri Commune, Senereuș Village", period: "11/01/2020 - 09/2022",
-          project: { name: "T.I.M.E. NORD-VEST - Young People Integrated through European Measures in the North-West Region", contractCode: "POCU/738/4/20/136130" },
-          bullets: ["Developed, revised and approved the vocational training methodology and related sub-activity documents", "Contributed to developing the vocational training curriculum (field introduction, general and specific concepts, training methods: presentation, observation, questioning, demonstration) for a business plan", "Verified documents required for training sessions and exams, ensuring compliance with the implementation schedule", "Ensured equal opportunities and non-discrimination throughout the training courses", "Coordinated multidisciplinary teams in a project focused on the social and professional integration of vulnerable young people"] },
-        { role: "Target Group Officer", organization: "S.C. Ioanida Turism S.R.L.", location: "Deda", period: "07/28/2020 - 04/15/2021",
-          project: { name: "Entrepreneurship for doers! - Sustainable development in the North-East region", contractCode: "POCU/82/3/7/104437" },
-          bullets: ["Selected and recruited the target group", "Assessed participants' motivation to start their own business", "Maintained communication with the target group throughout the project"] },
-        { role: "Specialized Trainer", organization: "S.C. Unicsports S.R.L.", location: "Deda", period: "11/13/2019 - 02/06/2020",
-          project: { name: "From marginalization to integration!", contractCode: "POCU/18/4/1/115353" }, bullets: [] },
-        { role: "Partner Coordinator 2", organization: "\"Hyperion\" Cultural Foundation", location: "Târgu Mureș", period: "02/28/2019 - 03/30/2020",
-          project: { name: "Whatever you learn, you learn for yourself - Stop school dropout!", contractCode: "POCU/74/6/18/108105" }, bullets: [] },
-        { role: "Collaborator", organization: "\"Astur Mureș\" Tourism Association", location: "Reghin", period: "03/09/2011 - 03/09/2016",
-          project: { name: "Reghin Ethnography Museum - culture and tradition", contractCode: "AM POR no. 25304" },
-          bullets: ["Involved in developing workshops and thematic presentations", "Took part in brainstorming sessions with project participants"] },
-        { role: "Volunteer - Social Activities", organization: "Integro Foundation", location: "Târgu Mureș", period: "08/11/2008 - 08/17/2010",
-          project: null,
-          bullets: ["Involved in educational centers and workshops in Târgu Mureș, focused on learning through play and introducing reading/writing to children from disadvantaged families", "Organized and led formative-religious workshops centered on respect within the family, social coexistence, kindness and solidarity", "Organized free social camps at Sălard (Integro Holiday Village)", "Ran educational play sessions with children from Lunca Bradului and the vulnerable Târgu Mureș-Valea Rece community (Roma children)", "Took part in personal development and volunteer training sessions"] }
-      ],
-      education: [
-        { type: "degree", title: "Master's Degree - Financial Management", field: "Business Financial Management", institution: "\"Dimitrie Cantemir\" University of Târgu Mureș", period: "09/30/2014 - 06/11/2016",
-          bullets: ["Theoretical financial-fiscal foundations for dynamism and innovation in business", "Understanding of macroeconomic issues related to currency and monetary flows", "Use of information systems concepts in enterprises"] },
-        { type: "degree", title: "Bachelor's Degree - ECTS (Trade, Tourism and Services Economics)", field: null, institution: "\"Dimitrie Cantemir\" University of Târgu Mureș", period: "09/30/2011 - 07/11/2014",
-          bullets: ["Political economy, managerial and financial accounting, statistics and applied mathematics", "Management, marketing and promotional techniques, public finance", "Human resources management and social insurance/protection"] },
-        { type: "certificate", title: "Certificate of Completion - Entrepreneurial Skills", field: null, institution: null, period: "04/19/2013 - 06/14/2013", bullets: [] },
-        { type: "certificate", title: "ECDL STANDARD Certification", field: null, institution: "ECDL Romania", period: "02/12/2020", bullets: ["Modules: databases, spreadsheets, word processing, online tools, IT security, presentations, computer essentials"] },
-        { type: "certificate", title: "HR Inspector / Officer", field: null, institution: "Loop Operations SRL", location: "Bucharest", period: "09/06/2019", bullets: [] },
-        { type: "certificate", title: "Train the Trainer", field: null, institution: "SC Unic Sports SRL", location: "Deda", period: "07/01/2019", bullets: [] },
-        { type: "certificate", title: "Project Manager", field: null, institution: "Ioanida Turism SRL", location: "Deda Commune", period: "11/17/2020 - 12/09/2020", bullets: [] },
-        { type: "certificate", title: "Social Economy Entrepreneur", field: null, institution: "PROGPERS Foundation", location: "Alba Iulia", period: "2025", bullets: [] }
-      ],
-      technicalSkills: {
-        "Programming": ["PHP", "JavaScript", "TypeScript", "Python"],
-        "Databases": ["SQL", "NoSQL"],
-        "Mobile": ["iOS", "Android"],
-        "Infrastructure": ["Microsoft Server 2019 (advanced management)", "VPS server management"],
-        "Office & design": ["Microsoft Office (advanced level)", "Photoshop (advanced level)"],
-        "Other": ["ECDL Standard", "Social Media", "Payment processors"]
+      "about": {
+        "draft": true,
+        "text": "Entrepreneur and software developer (own company since 2013) and founder of Căsuța Jocului, a non-formal education center for children. Experience in EU-funded projects (ROP, HCOP, PIDS) since 2011, combining software development with project management: coordinating partners and multidisciplinary teams, developing methodologies, monitoring indicators and reporting."
       },
-      organizationalSkills: {
-        summary: "Management of European-funded projects (POCU/ESF), coordination of partners and multidisciplinary teams, development of project methodologies and documents, indicator and report monitoring, identifying and securing external funding sources (national/European), implementation and administration of IT security systems for networks and IT infrastructure, collaboration with Regional Intermediate Bodies.",
-        drivingLicense: "Driving license: B, BE"
-      },
-      languages: [
-        { name: "Romanian", level: "Native language" },
-        { name: "English", listening: "C2", reading: "C2", spokenProduction: "C1", spokenInteraction: "C2", writing: "C1" }
+      "experience": [
+        {
+          "role": "Founder and Administrator",
+          "organization": "Căsuța Jocului S.R.L.",
+          "location": "Mureș",
+          "period": "2025 - present",
+          "project": null,
+          "bullets": [
+            "Founded and run a non-formal education center for children aged 1.5–4",
+            "Manage all operations: human resources, legal compliance and marketing",
+            "Developed the center's own digital platform: website, administration platform and mobile app (Kidoo)"
+          ]
+        },
+        {
+          "role": "Founder and Software Developer",
+          "organization": "Own software development company (B2B)",
+          "location": "Romania",
+          "period": "2013 - present",
+          "project": null,
+          "bullets": [
+            "Build custom software solutions for B2B clients (PHP, JavaScript, TypeScript, Python)",
+            "Built a complete online payment flow from scratch with Stripe (Node.js/TypeScript, Angular) for a tour operator over 2 years",
+            "Administer servers (Microsoft Server 2019, VPS) and implement IT security systems"
+          ]
+        },
+        {
+          "role": "Information Expert 2 - Partner",
+          "organization": "Asociația Getica",
+          "location": "Târgu Mureș",
+          "period": "07/2024",
+          "project": {
+            "name": "SES 4 YOU - Support for setting up social enterprises in rural areas, North-West and Centre regions",
+            "contractCode": "PIDS/83/PIDS_P3/OP4/ESO4.1/PIDS_A12/309922"
+          },
+          "bullets": [
+            "Informed and selected at least 66 people from a target group of 132, through campaigns run simultaneously across multiple locations",
+            "Signed at least 10 cooperation protocols with local authorities and NGOs, and distributed training materials",
+            "Applied and analyzed questionnaires, updated target group files, and maintained ongoing communication with participants"
+          ]
+        },
+        {
+          "role": "Assistant Manager",
+          "organization": "Târgu Mureș County Emergency Clinical Hospital",
+          "location": "Târgu Mureș",
+          "period": "03/2023 - 07/2023",
+          "project": {
+            "name": "Be responsible for your health - regional prevention, early detection, diagnosis and early treatment programs for cervical cancer - Phase II, Centre region (co-financed under POCU 2014-2020)",
+            "contractCode": "POCU/826/4/9/138603"
+          },
+          "bullets": [
+            "Directly assisted the project manager in informing and supporting vulnerable groups in rural areas, particularly women without access to basic healthcare services",
+            "Monitored and verified monthly reports submitted by doctors and auxiliary staff"
+          ]
+        },
+        {
+          "role": "Partner Coordinator",
+          "organization": "Asociația Getica",
+          "location": "Târgu Mureș",
+          "period": "01/2022 - 09/2022",
+          "project": {
+            "name": "innoCENT NORD-VEST",
+            "contractCode": "POCU/829/6/13/141999"
+          },
+          "bullets": [
+            "Developed and updated the project's working methodologies and tools",
+            "Assigned and coordinated tasks for experts involved in project activities",
+            "Conducted on-site visits to verify implementation"
+          ]
+        },
+        {
+          "role": "Information Expert - Partner 2",
+          "organization": "Asociația Getica",
+          "location": "Târgu Mureș",
+          "period": "03/2021 - 09/2021",
+          "project": {
+            "name": "T.I.M.E. CENTRU - Young People Integrated through European Measures in the Centre Region",
+            "contractCode": "POCU/738/4/20/135850"
+          },
+          "bullets": [
+            "Presented the benefits of a comprehensive social, medical and socio-medical services system, as well as the project's opportunities",
+            "Identified, selected and registered target group members according to the selection criteria",
+            "Prepared information and selection files, reporting accurately and on time to the line manager",
+            "Accountable for meeting the sub-activity's performance indicators"
+          ]
+        },
+        {
+          "role": "Partner Coordinator 2",
+          "alternateTitle": "Technical Director and Partner Coordinator",
+          "organization": "Asociația Getica",
+          "location": "Bălăușeri Commune, Senereuș Village",
+          "period": "11/2020 - 09/2022",
+          "project": {
+            "name": "T.I.M.E. NORD-VEST - Young People Integrated through European Measures in the North-West Region",
+            "contractCode": "POCU/738/4/20/136130"
+          },
+          "bullets": [
+            "Developed, revised and approved the vocational training methodology and related sub-activity documents",
+            "Contributed to developing the vocational training curriculum (field introduction, general and specific concepts, training methods: presentation, observation, questioning, demonstration) for a business plan",
+            "Verified documents required for training sessions and exams, ensuring compliance with the implementation schedule",
+            "Ensured equal opportunities and non-discrimination throughout the training courses",
+            "Coordinated multidisciplinary teams in a project focused on the social and professional integration of vulnerable young people"
+          ]
+        },
+        {
+          "role": "Target Group Officer",
+          "organization": "S.C. Ioanida Turism S.R.L.",
+          "location": "Deda",
+          "period": "07/2020 - 04/2021",
+          "project": {
+            "name": "Entrepreneurship for doers! - Sustainable development in the North-East region",
+            "contractCode": "POCU/82/3/7/104437"
+          },
+          "bullets": [
+            "Selected and recruited the target group",
+            "Assessed participants' motivation to start their own business",
+            "Maintained communication with the target group throughout the project"
+          ]
+        },
+        {
+          "role": "Specialized Trainer",
+          "organization": "S.C. Unicsports S.R.L.",
+          "location": "Deda",
+          "period": "11/2019 - 02/2020",
+          "project": {
+            "name": "From marginalization to integration!",
+            "contractCode": "POCU/18/4/1/115353"
+          },
+          "bullets": []
+        },
+        {
+          "role": "Partner Coordinator 2",
+          "organization": "\"Hyperion\" Cultural Foundation",
+          "location": "Târgu Mureș",
+          "period": "02/2019 - 03/2020",
+          "project": {
+            "name": "Whatever you learn, you learn for yourself - Stop school dropout!",
+            "contractCode": "POCU/74/6/18/108105"
+          },
+          "bullets": []
+        },
+        {
+          "role": "Collaborator",
+          "organization": "\"Astur Mureș\" Tourism Association",
+          "location": "Reghin",
+          "period": "03/2011 - 03/2016",
+          "project": {
+            "name": "Reghin Ethnography Museum - culture and tradition",
+            "contractCode": "AM POR no. 25304"
+          },
+          "bullets": [
+            "Involved in developing workshops and thematic presentations",
+            "Took part in brainstorming sessions with project participants"
+          ]
+        },
+        {
+          "category": "volunteer",
+          "role": "Volunteer - Social Activities",
+          "organization": "Integro Foundation",
+          "location": "Târgu Mureș",
+          "period": "08/2008 - 08/2010",
+          "project": null,
+          "bullets": [
+            "Involved in educational centers and workshops in Târgu Mureș, focused on learning through play and introducing reading/writing to children from disadvantaged families",
+            "Organized and led formative-religious workshops centered on respect within the family, social coexistence, kindness and solidarity",
+            "Organized free social camps at Sălard (Integro Holiday Village)",
+            "Ran educational play sessions with children from Lunca Bradului and the vulnerable Târgu Mureș-Valea Rece community (Roma children)",
+            "Took part in personal development and volunteer training sessions"
+          ]
+        }
       ],
-      cta: { downloadCv: "Download CV (PDF)" },
-      cefrLabels: { listening: "Listening", reading: "Reading", spokenProduction: "Spoken production", spokenInteraction: "Spoken interaction", writing: "Writing" },
-      pdfFile: "cv-ovidiu-simon-en.pdf"
+      "education": [
+        {
+          "type": "degree",
+          "level": "EQF level 7",
+          "title": "Master's Degree - Financial Management",
+          "field": "Business Financial Management",
+          "institution": "\"Dimitrie Cantemir\" University of Târgu Mureș",
+          "period": "09/2014 - 06/2016",
+          "bullets": [
+            "Theoretical financial-fiscal foundations for dynamism and innovation in business",
+            "Understanding of macroeconomic issues related to currency and monetary flows",
+            "Use of information systems concepts in enterprises"
+          ]
+        },
+        {
+          "type": "degree",
+          "level": "EQF level 6",
+          "title": "Bachelor's Degree - ECTS (Trade, Tourism and Services Economics)",
+          "field": null,
+          "institution": "\"Dimitrie Cantemir\" University of Târgu Mureș",
+          "period": "09/2011 - 07/2014",
+          "bullets": [
+            "Political economy, managerial and financial accounting, statistics and applied mathematics",
+            "Management, marketing and promotional techniques, public finance",
+            "Human resources management and social insurance/protection"
+          ]
+        },
+        {
+          "type": "certificate",
+          "title": "Social Economy Entrepreneur",
+          "field": null,
+          "institution": "PROGPERS Foundation",
+          "location": "Alba Iulia",
+          "period": "2025",
+          "bullets": []
+        },
+        {
+          "type": "certificate",
+          "title": "ECDL STANDARD Certification",
+          "field": null,
+          "institution": "ECDL Romania",
+          "period": "02/2020",
+          "bullets": [
+            "Modules: databases, spreadsheets, word processing, online tools, IT security, presentations, computer essentials"
+          ]
+        },
+        {
+          "type": "certificate",
+          "title": "Project Manager",
+          "field": null,
+          "institution": "Ioanida Turism SRL",
+          "location": "Deda Commune",
+          "period": "11/2020 - 12/2020",
+          "bullets": []
+        },
+        {
+          "type": "certificate",
+          "title": "HR Inspector / Officer",
+          "field": null,
+          "institution": "Loop Operations SRL",
+          "location": "Bucharest",
+          "period": "09/2019",
+          "bullets": []
+        },
+        {
+          "type": "certificate",
+          "title": "Train the Trainer",
+          "field": null,
+          "institution": "SC Unic Sports SRL",
+          "location": "Deda",
+          "period": "07/2019",
+          "bullets": []
+        },
+        {
+          "type": "certificate",
+          "title": "Certificate of Completion - Entrepreneurial Skills",
+          "field": null,
+          "institution": null,
+          "period": "04/2013 - 06/2013",
+          "bullets": []
+        }
+      ],
+      "technicalSkills": {
+        "Programming": [
+          "PHP",
+          "JavaScript",
+          "TypeScript",
+          "Python",
+          "Node.js"
+        ],
+        "Frameworks & mobile": [
+          "Angular",
+          "Ionic",
+          "Mobile apps (iOS, Android)"
+        ],
+        "Databases & cloud": [
+          "SQL",
+          "NoSQL",
+          "Firebase"
+        ],
+        "Payments & integrations": [
+          "Stripe (online payments)"
+        ],
+        "Infrastructure & IT security": [
+          "Microsoft Server 2019 (advanced management)",
+          "VPS servers",
+          "IT security systems"
+        ],
+        "Office & design": [
+          "Microsoft Office (advanced level)",
+          "Photoshop (advanced level)"
+        ],
+        "Digital marketing": [
+          "Social media",
+          "Meta Ads"
+        ],
+        "Digital certifications": [
+          "ECDL Standard (2020)"
+        ]
+      },
+      "organizationalSkills": {
+        "items": [
+          "Management of EU-funded projects (ROP, HCOP, PIDS)",
+          "Coordination of partners and multidisciplinary teams",
+          "Development of project methodologies and documents",
+          "Indicator and report monitoring; collaboration with Regional Intermediate Bodies",
+          "Identifying and securing external funding sources (national/European)"
+        ],
+        "drivingLicense": "Driving license: B, BE"
+      },
+      "languages": [
+        {
+          "name": "Romanian",
+          "level": "Native language"
+        },
+        {
+          "name": "English",
+          "listening": "C2",
+          "reading": "C2",
+          "spokenProduction": "C1",
+          "spokenInteraction": "C2",
+          "writing": "C1"
+        }
+      ],
+      "cta": {
+        "downloadCv": "Download CV (PDF)"
+      },
+      "cefrLabels": {
+        "listening": "Listening",
+        "reading": "Reading",
+        "spokenProduction": "Spoken production",
+        "spokenInteraction": "Spoken interaction",
+        "writing": "Writing"
+      },
+      "pdfFile": "cv-ovidiu-simon-en.pdf"
     }
   };
 
@@ -258,37 +802,55 @@
   /* ------------------------------------------------------------------ */
 
   function sizeClassForExperience(item, index) {
-    if (index === 0) return "bento-card--wide";
+    if (index < 2) return "bento-card--wide";
     if (item.bullets && item.bullets.length >= 4) return "bento-card--feature";
     if (!item.bullets || item.bullets.length === 0) return "bento-card--aside bento-card--compact";
     return "";
   }
 
   function renderExperience(lang) {
-    var grid = document.getElementById("experienceGrid");
-    grid.innerHTML = "";
-    CV_DATA[lang].experience.forEach(function (item, index) {
-      var card = el("article", "bento-card reveal " + sizeClassForExperience(item, index));
-      var title = item.alternateTitle ? item.role + " / " + item.alternateTitle : item.role;
+    var workGrid = document.getElementById("experienceGrid");
+    var volunteerGrid = document.getElementById("volunteerGrid");
+    var volunteerSection = document.getElementById("volunteer");
+    workGrid.innerHTML = "";
+    volunteerGrid.innerHTML = "";
 
-      var projectHtml = "";
-      if (item.project) {
-        projectHtml = '<div class="bento-card__project">' + escapeHtml(item.project.name) +
-          '<span class="bento-card__project-code">' + escapeHtml(item.project.contractCode) + "</span></div>";
-      }
+    var items = CV_DATA[lang].experience;
+    var workItems = items.filter(function (item) { return item.category !== "volunteer"; });
+    var volunteerItems = items.filter(function (item) { return item.category === "volunteer"; });
+    volunteerSection.hidden = volunteerItems.length === 0;
 
-      card.innerHTML =
-        '<div class="bento-card__top">' +
-          '<span class="bento-card__role">' + escapeHtml(title) + "</span>" +
-          '<span class="bento-card__period">' + escapeHtml(item.period) + "</span>" +
-        "</div>" +
-        '<div class="bento-card__org">' + escapeHtml(item.organization) +
-          ' &middot; <span class="loc">' + escapeHtml(item.location) + "</span></div>" +
-        projectHtml +
-        bulletsList(item.bullets);
+    function renderGroup(list, grid) {
+      list.forEach(function (item, index) {
+        grid.appendChild(buildExperienceCard(item, grid === workGrid ? index : 2));
+      });
+    }
 
-      grid.appendChild(card);
-    });
+    renderGroup(workItems, workGrid);
+    renderGroup(volunteerItems, volunteerGrid);
+  }
+
+  function buildExperienceCard(item, index) {
+    var card = el("article", "bento-card reveal " + sizeClassForExperience(item, index));
+    var title = item.alternateTitle ? item.role + " / " + item.alternateTitle : item.role;
+
+    var projectHtml = "";
+    if (item.project) {
+      projectHtml = '<div class="bento-card__project">' + escapeHtml(item.project.name) +
+        '<span class="bento-card__project-code">' + escapeHtml(item.project.contractCode) + "</span></div>";
+    }
+
+    card.innerHTML =
+      '<div class="bento-card__top">' +
+        '<span class="bento-card__role">' + escapeHtml(title) + "</span>" +
+        '<span class="bento-card__period">' + escapeHtml(item.period) + "</span>" +
+      "</div>" +
+      '<div class="bento-card__org">' + escapeHtml(item.organization) +
+        ' &middot; <span class="loc">' + escapeHtml(item.location) + "</span></div>" +
+      projectHtml +
+      bulletsList(item.bullets);
+
+    return card;
   }
 
   /* ------------------------------------------------------------------ */
@@ -314,6 +876,7 @@
           '<span class="bento-card__period">' + escapeHtml(item.period) + "</span>" +
         "</div>" +
         '<span class="bento-card__type">' + escapeHtml(item.type) + "</span>" +
+        (item.level ? ' <span class="bento-card__type bento-card__level">' + escapeHtml(item.level) + "</span>" : "") +
         (institutionLine ? '<div class="bento-card__org">' + institutionLine + "</div>" : "") +
         (item.field ? '<div class="bento-card__org">' + escapeHtml(item.field) + "</div>" : "") +
         bulletsList(item.bullets);
@@ -341,7 +904,13 @@
       container.appendChild(group);
     });
 
-    document.getElementById("organizationalSkillsText").textContent = data.organizationalSkills.summary;
+    var orgList = document.getElementById("organizationalSkillsList");
+    orgList.innerHTML = "";
+    data.organizationalSkills.items.forEach(function (text) {
+      var li = document.createElement("li");
+      li.textContent = text;
+      orgList.appendChild(li);
+    });
     document.getElementById("drivingLicenseText").textContent = data.organizationalSkills.drivingLicense;
   }
 
@@ -389,32 +958,40 @@
     node.textContent = CV_DATA[lang].about.text;
   }
 
+  function prettyUrl(url) {
+    return String(url).replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+  }
+
   function renderContact(lang) {
     var data = CV_DATA[lang].personalInfo;
 
-    var emailLink = document.getElementById("emailLink");
-    var emailText = document.getElementById("emailText");
-    if (data.email && data.email !== "[DE COMPLETAT]") {
-      emailLink.setAttribute("href", "mailto:" + data.email);
-      emailText.textContent = data.email;
-    } else {
-      emailLink.setAttribute("href", "#");
-      emailLink.setAttribute("aria-disabled", "true");
-      emailText.textContent = "[DE COMPLETAT]";
-    }
+    document.getElementById("heroHeadline").textContent = data.headline || "";
+    document.getElementById("heroLocation").textContent = data.location || "";
 
-    var linkedinLink = document.getElementById("linkedinLink");
-    var linkedinText = document.getElementById("linkedinText");
-    if (data.linkedin && data.linkedin !== "[DE COMPLETAT]") {
-      linkedinLink.setAttribute("href", data.linkedin);
-      linkedinLink.setAttribute("target", "_blank");
-      linkedinLink.setAttribute("rel", "noopener");
-      linkedinText.textContent = data.linkedin;
-    } else {
-      linkedinLink.setAttribute("href", "#");
-      linkedinLink.setAttribute("aria-disabled", "true");
-      linkedinText.textContent = "[DE COMPLETAT]";
-    }
+    // Contact links appear in the hero (print-friendly header) and in the footer.
+    [["emailLink", "emailText", "heroEmailLink", "heroEmailText"],
+     ["linkedinLink", "linkedinText", "heroLinkedinLink", "heroLinkedinText"]].forEach(function (ids, i) {
+      var value = i === 0 ? data.email : data.linkedin;
+      var href = i === 0 ? "mailto:" + value : value;
+      var text = i === 0 ? value : prettyUrl(value);
+
+      [[ids[0], ids[1]], [ids[2], ids[3]]].forEach(function (pair) {
+        var link = document.getElementById(pair[0]);
+        var label = document.getElementById(pair[1]);
+        if (!link || !label) return;
+        if (value) {
+          link.hidden = false;
+          link.setAttribute("href", href);
+          if (i === 1) {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener");
+          }
+          label.textContent = text;
+        } else {
+          link.hidden = true;
+        }
+      });
+    });
   }
 
   function renderContent(lang) {

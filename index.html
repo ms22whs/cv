@@ -6,11 +6,11 @@
   <meta name="robots" content="noindex">
 
   <title data-ro="Ovidiu Simon — CV" data-en="Ovidiu Simon — Resume">Ovidiu Simon — CV</title>
-  <meta name="description" data-ro="CV profesional — Ovidiu Simon, antreprenor și dezvoltator software cu peste un deceniu de experiență în proiecte cu finanțare europeană POCU/FSE." data-en="Professional resume — Ovidiu Simon, entrepreneur and software developer with over a decade of experience in POCU/ESF-funded European projects." content="CV profesional — Ovidiu Simon, antreprenor și dezvoltator software cu peste un deceniu de experiență în proiecte cu finanțare europeană POCU/FSE.">
+  <meta name="description" data-ro="CV profesional — Ovidiu Simon, antreprenor și dezvoltator software, cu experiență în proiecte cu finanțare europeană (POR, POCU, PIDS) din 2011." data-en="Professional resume — Ovidiu Simon, entrepreneur and software developer with experience in EU-funded projects (ROP, HCOP, PIDS) since 2011." content="CV profesional — Ovidiu Simon, antreprenor și dezvoltator software, cu experiență în proiecte cu finanțare europeană (POR, POCU, PIDS) din 2011.">
 
   <meta property="og:type" content="profile">
   <meta property="og:title" data-ro="Ovidiu Simon — CV" data-en="Ovidiu Simon — Resume" content="Ovidiu Simon — CV">
-  <meta property="og:description" data-ro="Antreprenor și dezvoltator software cu peste un deceniu de experiență în proiecte cu finanțare europeană POCU/FSE." data-en="Entrepreneur and software developer with over a decade of experience in POCU/ESF-funded European projects." content="Antreprenor și dezvoltator software cu peste un deceniu de experiență în proiecte cu finanțare europeană POCU/FSE.">
+  <meta property="og:description" data-ro="Antreprenor și dezvoltator software, cu experiență în proiecte cu finanțare europeană (POR, POCU, PIDS) din 2011." data-en="Entrepreneur and software developer with experience in EU-funded projects (ROP, HCOP, PIDS) since 2011." content="Antreprenor și dezvoltator software, cu experiență în proiecte cu finanțare europeană (POR, POCU, PIDS) din 2011.">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%84%3C/text%3E%3C/svg%3E">
 
@@ -25,14 +25,16 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ovidiu Simon",
-    "jobTitle": "Antreprenor & Dezvoltator Software",
+    "jobTitle": "Coordonator proiecte europene & Dezvoltator Software",
+    "email": "mailto:ovysimon@gmail.com",
+    "sameAs": ["https://www.linkedin.com/in/ovisimon/"],
     "worksFor": {
       "@type": "Organization",
-      "name": "Firmă proprie"
+      "name": "Căsuța Jocului S.R.L."
     },
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Târgu Mureș",
+      "addressRegion": "Mureș",
       "addressCountry": "RO"
     }
   }
@@ -51,6 +53,7 @@
       <nav class="site-nav" aria-label="Navigare principală">
         <a href="#about" data-ro="Despre" data-en="About">Despre</a>
         <a href="#experience" data-ro="Experiență" data-en="Experience">Experiență</a>
+        <a href="#volunteer" data-ro="Voluntariat" data-en="Volunteering">Voluntariat</a>
         <a href="#education" data-ro="Educație" data-en="Education">Educație</a>
         <a href="#skills" data-ro="Competențe" data-en="Skills">Competențe</a>
         <a href="#languages" data-ro="Limbi" data-en="Languages">Limbi</a>
@@ -81,6 +84,12 @@
           <span>OS</span>
         </div>
         <h1 id="hero-heading" class="hero__name">Ovidiu Simon</h1>
+        <p class="hero__headline" id="heroHeadline"></p>
+        <ul class="hero__meta" aria-label="Contact">
+          <li class="hero__meta-item" id="heroLocation"></li>
+          <li class="hero__meta-item"><a href="#" id="heroEmailLink"><span id="heroEmailText"></span></a></li>
+          <li class="hero__meta-item"><a href="#" id="heroLinkedinLink"><span id="heroLinkedinText"></span></a></li>
+        </ul>
         <a class="btn btn--primary hero__cta" id="downloadCvBtn" href="cv-ovidiu-simon-ro.pdf" download>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
           <span data-ro="Descarcă CV (PDF)" data-en="Download CV (PDF)">Descarcă CV (PDF)</span>
@@ -112,6 +121,17 @@
       </div>
     </section>
 
+    <!-- VOLUNTEER -->
+    <section class="section" id="volunteer" aria-labelledby="volunteer-heading">
+      <div class="section__inner">
+        <h2 class="section__heading" id="volunteer-heading">
+          <svg class="section__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-9A5.2 5.2 0 0 1 12 6.6 5.2 5.2 0 0 1 21.3 12C19 16.6 12 21 12 21Z"/></svg>
+          <span data-ro="Voluntariat" data-en="Volunteering">Voluntariat</span>
+        </h2>
+        <div class="bento-grid" id="volunteerGrid"></div>
+      </div>
+    </section>
+
     <!-- EDUCATION -->
     <section class="section" id="education" aria-labelledby="education-heading">
       <div class="section__inner">
@@ -134,7 +154,8 @@
           <div class="skills-groups" id="technicalSkillsGroups"></div>
         </div>
         <div class="reveal card card--org-skills">
-          <p class="org-skills-text" id="organizationalSkillsText"></p>
+          <h3 class="org-skills-title" data-ro="Competențe organizaționale" data-en="Organizational skills">Competențe organizaționale</h3>
+          <ul class="org-skills-list" id="organizationalSkillsList"></ul>
           <p class="org-skills-license" id="drivingLicenseText"></p>
         </div>
       </div>
@@ -161,12 +182,12 @@
       <div class="site-footer__links">
         <a class="footer-link" id="emailLink" href="#">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-          <span id="emailText">[DE COMPLETAT]</span>
+          <span id="emailText"></span>
         </a>
 
         <a class="footer-link" id="linkedinLink" href="#">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8v.01M12 16v-3.5a1.75 1.75 0 0 1 3.5 0V16M12 16v-5"/></svg>
-          <span id="linkedinText">[DE COMPLETAT]</span>
+          <span id="linkedinText"></span>
         </a>
 
         <a class="btn btn--secondary" id="footerDownloadBtn" href="cv-ovidiu-simon-ro.pdf" download>
