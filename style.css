@@ -421,6 +421,14 @@ html {
   line-height: 1.05;
 }
 
+.hero__doctitle {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-text-faint);
+}
+
 .hero__headline {
   font-family: var(--font-display);
   font-size: var(--text-lg);
@@ -925,6 +933,7 @@ html {
     text-align: left;
     gap: 1mm;
   }
+  .hero__doctitle { font-size: var(--text-sm); letter-spacing: 0.25em; color: #000; }
   .hero__name { font-size: var(--text-hero); letter-spacing: -0.01em; }
   .hero__headline { font-size: var(--text-xl); font-weight: 600; color: #000; }
   .hero__meta { justify-content: flex-start; gap: 0 4mm; font-size: var(--text-sm); color: #000; }
