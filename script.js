@@ -1031,6 +1031,50 @@
     });
   }
 
+
+  /* ------------------------------------------------------------------ */
+  /* Key figures: computed from data, animated count-up                  */
+  /* ------------------------------------------------------------------ */
+
+  function initStats() {
+    var strip = document.querySelector(".stats");
+    if (!strip) return;
+    var year = new Date().getFullYear();
+    var values = { euYears: year - 2011, devYears: year - 2013, projects: countProjects() };
+
+    var nums = strip.querySelectorAll("[data-stat]");
+    nums.forEach(function (n) {
+      var v = values[n.getAttribute("data-stat")];
+      if (v) n.setAttribute("data-target", String(v));
+      n.textContent = String(v || n.textContent);
+    });
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) return;
+
+    strip.classList.add("reveal-stats");
+    nums.forEach(function (n) { n.textContent = "0"; });
+    var io = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      io.disconnect();
+      strip.classList.add("is-visible");
+      var start = performance.now(), dur = 1100;
+      (function tick(now) {
+        var t = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - t, 3);
+        nums.forEach(function (n) {
+          n.textContent = String(Math.round(e * Number(n.getAttribute("data-target"))));
+        });
+        if (t < 1) requestAnimationFrame(tick);
+      })(start);
+    }, { threshold: 0.4 });
+    io.observe(strip);
+  }
+
+  function countProjects() {
+    var items = (CV_DATA.ro && CV_DATA.ro.experience) || [];
+    return items.filter(function (x, i) {
+      return x.category !== "volunteer" && /\d{2}\/\d{4}|\d{4}/.test(x.period || "") && !/prezent|present/i.test(x.period || "");
+    }).length;
+  }
+
   /* ------------------------------------------------------------------ */
   /* Scroll progress bar                                                 */
   /* ------------------------------------------------------------------ */
@@ -1074,6 +1118,7 @@
 
     setLang(getInitialLang());
     initScrollProgress();
+    initStats();
   }
 
   document.addEventListener("DOMContentLoaded", init);

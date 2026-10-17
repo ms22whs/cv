@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ms22whs.github.io/cv/sitemap.xml
