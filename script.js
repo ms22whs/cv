@@ -875,8 +875,10 @@
           '<span class="bento-card__role">' + escapeHtml(item.title) + "</span>" +
           '<span class="bento-card__period">' + escapeHtml(item.period) + "</span>" +
         "</div>" +
-        '<span class="bento-card__type">' + escapeHtml(item.type) + "</span>" +
-        (item.level ? ' <span class="bento-card__type bento-card__level">' + escapeHtml(item.level) + "</span>" : "") +
+        '<div class="bento-card__meta">' +
+          '<span class="bento-card__type">' + escapeHtml(item.type) + "</span>" +
+          (item.level ? ' <span class="bento-card__type bento-card__level">' + escapeHtml(item.level) + "</span>" : "") +
+        "</div>" +
         (institutionLine ? '<div class="bento-card__org">' + institutionLine + "</div>" : "") +
         (item.field ? '<div class="bento-card__org">' + escapeHtml(item.field) + "</div>" : "") +
         bulletsList(item.bullets);

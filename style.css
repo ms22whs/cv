@@ -876,6 +876,305 @@ html {
 }
 
 /* ==========================================================================
+   Professional refresh (screen only — print/PDF layout is defined below)
+   Sober hierarchy: left-aligned header, timeline for experience, side column
+   for skills/languages, quiet cards. Light/dark come from the existing tokens.
+   ========================================================================== */
+
+@media screen {
+  :root {
+    --container-width: 1120px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+  }
+
+  /* --- Controls: calmer, less "pill everywhere" --- */
+  .btn { border-radius: 10px; }
+  .btn--primary { box-shadow: none; }
+  .btn--primary:hover { box-shadow: none; }
+
+  /* --- Hero: left-aligned identity block --- */
+  .hero {
+    padding: clamp(2rem, 1.5rem + 2vw, 3.25rem) var(--space-md) clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .hero__inner {
+    max-width: var(--container-width);
+    padding-inline: var(--space-md);
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "avatar doctitle cta"
+      "avatar name     cta"
+      "avatar headline cta"
+      "avatar meta     cta";
+    column-gap: 1.75rem;
+    row-gap: 0.3rem;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero__avatar {
+    grid-area: avatar;
+    width: 84px;
+    height: 84px;
+    border-radius: 18px;
+    font-size: 1.6rem;
+    box-shadow: none;
+  }
+  .hero__doctitle { grid-area: doctitle; align-self: end; }
+  .hero__name {
+    grid-area: name;
+    font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+    letter-spacing: -0.025em;
+  }
+  .hero__headline { grid-area: headline; font-size: var(--text-lg); }
+  .hero__meta {
+    grid-area: meta;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.3rem 0;
+    margin-top: 0.35rem;
+  }
+  .hero__meta-item + .hero__meta-item::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 0 0.9rem;
+    border-radius: 50%;
+    background: var(--color-border-strong);
+    vertical-align: middle;
+  }
+  .hero__cta { grid-area: cta; margin-top: 0; }
+
+  /* --- Two-column CV body --- */
+  .cv-layout {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: clamp(1.75rem, 1.4rem + 1.5vw, 2.75rem) var(--space-md) clamp(2rem, 1.5rem + 2vw, 3.5rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 21.5rem;
+    gap: clamp(1.75rem, 1rem + 3vw, 3.25rem);
+    align-items: start;
+  }
+
+  .cv-layout .section {
+    display: block;
+    padding: 0;
+    margin-bottom: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem);
+  }
+  .cv-layout .section__inner { max-width: none; }
+
+  /* Section labels: small caps + hairline instead of icon + big heading */
+  .section__heading {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    gap: 0.9rem;
+    margin-bottom: 1.1rem;
+  }
+  .section__heading::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+  }
+  .section__icon { display: none; }
+
+  /* --- Cards: quiet, flat --- */
+  .card,
+  .bento-card {
+    box-shadow: none;
+    border-radius: var(--radius-lg);
+  }
+  .bento-card:hover,
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--color-border-strong);
+  }
+
+  .card--about {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--color-text);
+  }
+  .card--about:hover { border-color: transparent; }
+
+  /* --- Experience & volunteering: timeline --- */
+  #experienceGrid,
+  #volunteerGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--color-border);
+  }
+
+  #experienceGrid .bento-card,
+  #volunteerGrid .bento-card {
+    position: relative;
+    grid-column: auto;
+    gap: 0.45rem;
+    padding: 0 0 1.75rem;
+    background: none;
+    border: 0;
+    border-radius: 0;
+  }
+  #experienceGrid .bento-card:last-child,
+  #volunteerGrid .bento-card:last-child { padding-bottom: 0.25rem; }
+  #experienceGrid .bento-card:hover,
+  #volunteerGrid .bento-card:hover { border-color: transparent; }
+
+  #experienceGrid .bento-card::before,
+  #volunteerGrid .bento-card::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.5rem - 7px);
+    top: 0.42rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-bg);
+    border: 2px solid var(--color-border-strong);
+  }
+  /* Current roles get a filled accent marker */
+  #experienceGrid .bento-card:nth-child(-n+2)::before {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .bento-card__role { font-size: 1.05rem; letter-spacing: -0.005em; }
+  .bento-card__period {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .bento-card__org { font-size: var(--text-sm); }
+  .bento-card__project {
+    background: var(--color-surface-muted);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-size: 0.86rem;
+  }
+  .bento-card__bullets { gap: 0.3rem; }
+  .bento-card__bullets li::before {
+    top: 0.62em;
+    width: 5px;
+    height: 5px;
+  }
+
+  /* --- Education: compact two-column cards --- */
+  #educationGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin: 0;
+  }
+  #educationGrid .bento-card {
+    grid-column: auto;
+    gap: 0.3rem;
+    padding: 1rem 1.15rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+  }
+  #educationGrid .bento-card--feature { grid-column: 1 / -1; }
+  #educationGrid .bento-card__role { font-size: 0.98rem; }
+  .bento-card__type { letter-spacing: 0.06em; }
+  .bento-card__meta { display: flex; flex-wrap: wrap; align-items: baseline; }
+  .bento-card__level::before { content: "\00B7"; margin: 0 0.5em; color: var(--color-text-faint); }
+
+  /* Keep the period on the title line; long titles wrap inside their own column. */
+  @media (min-width: 641px) {
+    .bento-card__top { flex-wrap: nowrap; align-items: baseline; }
+    .bento-card__role { flex: 1 1 auto; min-width: 0; }
+    .bento-card__period { flex: none; }
+  }
+
+  /* --- Side column: skills, languages --- */
+  .cv-side .card { padding: 1.15rem 1.25rem; }
+  .card--skills { margin-bottom: 0.9rem; }
+  .skills-group { margin-bottom: 0.9rem; }
+  .skills-group__title { margin-bottom: 0.4rem; }
+  .skills-group__tags { gap: 0.35rem; }
+  .skill-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.22rem 0.6rem;
+    border-radius: 6px;
+  }
+  .skill-tag:hover { transform: none; }
+
+  .card--org-skills { margin-bottom: 0; }
+
+  #languagesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin: 0;
+  }
+  #languagesGrid .lang-card {
+    grid-column: auto;
+    padding: 1rem 1.25rem;
+  }
+  #languagesGrid .lang-card__cefr {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+  #languagesGrid .lang-card__cefr-item { padding: 0.35rem 0.6rem; font-size: 0.8rem; }
+  #languagesGrid .lang-card__name { font-size: 1rem; margin-bottom: 0.3rem; }
+
+  /* --- Footer: quieter --- */
+  .site-footer { margin-top: 0; padding: 1.75rem var(--space-md); }
+  .site-footer__heading { font-size: var(--text-base); }
+
+  /* --- Tablet / mobile --- */
+  @media (max-width: 920px) {
+    .cv-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .hero__inner {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas:
+        "avatar"
+        "doctitle"
+        "name"
+        "headline"
+        "meta"
+        "cta";
+      row-gap: 0.4rem;
+      justify-items: start;
+    }
+    .hero__avatar { width: 64px; height: 64px; border-radius: 14px; font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .hero__cta { margin-top: 0.75rem; }
+  }
+
+  @media (max-width: 640px) {
+    #educationGrid { grid-template-columns: minmax(0, 1fr); }
+    #experienceGrid,
+    #volunteerGrid { padding-left: 1.1rem; }
+    #experienceGrid .bento-card::before,
+    #volunteerGrid .bento-card::before { left: calc(-1.1rem - 7px); }
+    .bento-card__top { gap: 0.15rem; }
+    .hero__meta { flex-direction: column; align-items: flex-start; }
+    .hero__meta-item + .hero__meta-item::before { display: none; }
+  }
+}
+
+/* ==========================================================================
    Print
    ========================================================================== */
 
